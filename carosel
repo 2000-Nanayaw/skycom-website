@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Image Carousel</title>
+  <style type="text/css">
+    .carousel-container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+  </style>
+</head>
+<body>
+  <div class="carousel-container">
+    <div class="carousel-slide">
+      <img src="image1.jpg" alt="Image 1">
+      <img src="image2.jpg" alt="Image 2">
+      <img src="image3.jpg" alt="Image 3">
+    </div>
+  </div>
+
+
+
+  <script src="script.js">
+    const carouselSlide = document.querySelector(".carousel-slide");
+const images = document.querySelectorAll(".carousel-slide img");
+
+let counter = 0;
+const imageWidth = images[0].clientWidth;
+
+function slideNext() {
+  if (counter >= images.length - 1) return;
+  counter++;
+  carouselSlide.style.transform = `translateX(-${counter * imageWidth}px)`;
+}
+
+function slidePrev() {
+  if (counter <= 0) return;
+  counter--;
+  carouselSlide.style.transform = `translateX(-${counter * imageWidth}px)`;
+}
+
+setInterval(slideNext, 3000); // Auto slide every 3 seconds
+
+  </script>
+</body>
+</html>

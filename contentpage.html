@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Content Page with Modals</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .header {
+    background-color: crimson;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .marquee {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: marquee 20s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .main {
+    padding: 50px;
+  }
+
+  .section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 80%;
+    text-align: center;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #555;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .divisions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+
+  .division {
+    position: relative;
+    flex-basis: 23%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .division-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="marquee">
+      <span>The Sky Community School | Post Office Box 66 | Located In Fetteh-Kakraba | In The Central Region Of Ghana</span>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="section" style="background-image: url('images/1.jpg');">
+      <div class="overlay">
+        <h4>The Unbeatable class of basic four. With passion and dedication we are able to achieve our purpose. Aunty Vidash Class............</h4>
+        <p>Center for performance monitoring and evaluation. Basic four</p>
+        <button class="btn" onclick="openModal('modal1')" style="background-color: crimson; color: white;">Click for details</button>
+      </div>
+    </div>
+
+    <div class="section" style="background-image: url('images/0.JPG');">
+      <div class="overlay">
+        <h4>The Class of intellectuals. Being part of a society that contribute to the welfare and welbeing of kids is a great priority(5)
+        </h4>
+        <p>Basic five </p>
+        <button class="btn" onclick="openModal('modal2')" style="background-color: crimson; color: white;">Click for details</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal1">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+      <h2>AUNTY ABIGAIL</h2>
+      <div class="modal-text">
+        <p>Class Teacher and her children</p>
+        <img src="FACEBBOK/3.jpg" alt="AA" width="700" height="450">
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal2">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+      <h2>BASIC 5 SUPER STARS</h2>
+      <div class="modal-text">
+        <p>This is the content of Modal 2.</p>
+        <img src="FACEBBOK/3.jpg" alt="Modal Image 2" width="700" height="450">
+      </div>
+    </div>
+  </div>
+
+  <div class="main divisions">
+    <div class="division" style="background-image: url('images/a.jpg');">
+      <div class="division-overlay">
+        <h2></h2>
+        <br>
+        <br>
+        <br>
+        <button class="btn" onclick="openModal('modal3')" style="background-color: crimson;">OUR SUPER FRUIT DAY</button>
+      </div>
+    </div>
+    
+    <div class="division" style="background-image: url('images/e.jpg');">
+      <div class="division-overlay">
+        <h2></h2>
+        <br>
+        <br>
+        <br>
+        <button class="btn" onclick="openModal('modal4')" style="background-color: crimson;">CHILDREN SECTION</button>
+      </div>
+    </div>
+    
+    <div class="division" style="background-image: url('images/c1.jpg');">
+      <div class="division-overlay">
+        <h2></h2>
+        <br>
+        <br>
+        <br>
+        <button class="btn" onclick="openModal('modal5')" style="background-color: crimson;">BASIC SECTION</button>
+      </div>
+    </div>
+    
+    <div class="division" style="background-image: url('images/b1.JPG');">
+      <div class="division-overlay">
+        <h2></h2>
+        <br>
+        <br>
+        <br>
+        <button class="btn" onclick="openModal('modal6')" style="background-color: crimson;">Fun</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal3">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+      <h2>SKYCOM FRUIT DAY</h2>
+      <div class="modal-text">
+        <p>Sky com fruit day incollaboration of the teachers</p>
+        <img src="images/a1.jpg" alt="Modal Image 3" width="700" height="450">
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal4">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
+      <h2>The boy is on confortable lead</h2>
+      <div class="modal-text">
+        <p>FRUIT ARE GOOD FOR OUR HEALTH</p>
+        <img src="images/b1.jpg" alt="Modal Image 3" width="700" height="450">
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal5">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal5')">&times;</span>
+      <h2>An amazing performance of the kids</h2>
+      <div class="modal-text">
+        <p>IF YOU DONT TAKE FRUIT AS YOUR MEDICINE, YOU WILL TAKE MEDICINE AS YOUR FOOD.</p>
+        <img src="images/c1.jpg" alt="Modal Image 3" width="700" height="450">
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal6">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal6')">&times;</span>
+      <h2>The best performance</h2>
+      <div class="modal-text">
+        <p>THIS FRUIT DAY IS AMAZING</p>
+        <img src="images/d1.jpg" alt="Modal Image 3" width="700" height="450">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      modal.style.display = "flex";
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      modal.style.display = "none";
+    }
+  </script>
+</body>
+</html>

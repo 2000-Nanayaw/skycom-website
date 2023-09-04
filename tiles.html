@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery Page</title>
+<link rel="stylesheet" href="styles.css">
+<style type="text/css">
+  body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.gallery-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.gallery-tiles {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.tile {
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+.tabs {
+  display: flex;
+  align-items: center;
+}
+
+.tabs a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+
+</style>
+</head>
+<body>
+  <header class="header">
+    <video autoplay muted loop>
+      <source src="videos/Q.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </header>
+  <main class="gallery-container">
+    <div class="gallery-tiles">
+      <div class="tile" style="background-image: url('images/1.jpg');"></div>
+      <div class="tile" style="background-image: url('images/2.jpg');"></div>
+      <div class="tile" style="background-image: url('images/3.jpg');"></div>
+      <div class="tile" style="background-image: url('images/4.jpg');"></div>
+      <div class="tile" style="background-image: url('FACEBBOK/5.jpg');"></div>
+    </div>
+    
+  </main>
+  <main class="gallery-container">
+    <div class="gallery-tiles">
+      <div class="tile" style="background-image: url('FACEBBOK/6.jpg');"></div>
+      <div class="tile" style="background-image: url('FACEBBOK/7.jpg');"></div>
+      <div class="tile" style="background-image: url('FACEBBOK/8.jpg');"></div>
+      <div class="tile" style="background-image: url('FACEBBOK/9.jpg');"></div>
+      <div class="tile" style="background-image: url('FACEBBOK/10.jpg');"></div>
+    </div>
+    
+  </main>
+  <main class="gallery-container">
+    <div class="gallery-tiles">
+      <div class="tile" style="background-image: url('FACEBBOK/11.jpg');"></div>
+      <div class="tile" style="background-image: url('FACEBBOK/12.jpg');"></div>
+      <div class="tile" style="background-image: url('FACEBBOK/13.jpg');"></div>
+      <div class="tile" style="background-image: url('FACEBBOK/14.jpg');"></div>
+      <div class="tile" style="background-image: url('FACEBBOK/15.jpg');"></div>
+    </div>
+    
+  </main>
+  <main class="gallery-container">
+    <div class="gallery-tiles">
+      <div class="tile" style="background-image: url('FACEBBOK/16.jpg');"></div>
+      <div class="tile" style="background-image: url('FACEBBOK/17.jpg');"></div>
+      <div class="tile" style="background-image: url('FACEBBOK/18.jpg');"></div>
+      <div class="tile" style="background-image: url('FACEBBOK/19.jpg');"></div>
+      <div class="tile" style="background-image: url('FACEBBOK/20.jpg');"></div>
+    </div>
+    
+  </main>
+  <main class="gallery-container">
+    <div class="gallery-tiles">
+      <div class="tile" style="background-image: url('FACEBBOK/21.jpg');"></div>
+      <div class="tile" style="background-image: url('FACEBBOK/22.jpg');"></div>
+      <div class="tile" style="background-image: url('FACEBBOK/23.jpg');"></div>
+      <div class="tile" style="background-image: url('FACEBBOK/24.jpg');"></div>
+      <div class="tile" style="background-image: url('FACEBBOK/15.jpg');"></div>
+    </div>
+    <button id="changeImageButton"><a href="videotiles.html" style="text-decoration: none; color: white;">Switch To Videos</a></button>
+  </main>
+  <footer class="footer">
+    <nav class="tabs">
+      <a href="secondhomepage.html">Home</a>
+      <a href="about us page.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="contentpage.html">Content</a>
+      <a href="maingallery.html">Gallery</a>
+      <a href="tiles.html">Updated Gallery</a>
+      <a href="buttons.html">Clubs</a>
+      <a href="buttons.html">Social Plateform </a>
+    </nav>
+  </footer>
+  <script src="script.js">
+    const galleryTiles = document.querySelectorAll('.tile');
+const changeImageButton = document.getElementById('changeImageButton');
+const imagePaths = ['images/1.jpg', 'images/2.jpg', 'images/3.jpg', 'images/4.jpg', 'images/13.jpg'];
+let currentImageIndex = 0;
+
+changeImageButton.addEventListener('click', () => {
+  currentImageIndex = (currentImageIndex + 1) % imagePaths.length;
+  updateTileBackgrounds();
+});
+
+function updateTileBackgrounds() {
+  galleryTiles.forEach((tile, index) => {
+    tile.style.backgroundImage = `url('${imagePaths[(currentImageIndex + index) % imagePaths.length]}')`;
+  });
+}
+
+updateTileBackgrounds();
+setInterval(() => {
+  currentImageIndex = (currentImageIndex + 1) % imagePaths.length;
+  updateTileBackgrounds();
+}, 30000); // Change image every 30 seconds
+
+  </script>
+</body>
+</html>

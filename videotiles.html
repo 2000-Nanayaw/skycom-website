@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Video Gallery</title>
+    <style type="text/css">
+        /* Reset some default styles */
+body, h1, h2, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: crimson;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.video-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.video-tile {
+    flex: 1;
+    min-width: calc(25% - 20px); /* 4 tiles per row with 20px gap */
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: crimson;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Video Gallery</h1>
+    </header>
+    
+    <main>
+        <h2></h2>
+        <div class="video-tiles">
+            <!-- Video Tiles for  -->
+            <!-- You can use video elements here -->
+            <div class="video-tile">
+                <video controls>
+                    <source src="videos/B.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-tile">
+                <video controls>
+                    <source src="videos/Q.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <!-- Repeat this for the other 3 videos in  -->
+        </div>
+    </main>
+    
+    <main>
+        <h2></h2>
+        <div class="video-tiles">
+            <!-- Video Tiles for Section 2 -->
+            <!-- You can use video elements here -->
+            <div class="video-tile">
+                <video controls>
+                    <source src="videos/C.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-tile">
+                <video controls>
+                    <source src="videos/D.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <!-- Repeat this for the other 3 videos in Section 2 -->
+        </div>
+    </main>
+    <main>
+        <h2></h2>
+        <div class="video-tiles">
+            <!-- Video Tiles for Section 1 -->
+            <!-- You can use video elements here -->
+            <div class="video-tile">
+                <video controls>
+                    <source src="videos/F.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-tile">
+                <video controls>
+                    <source src="videos/F.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <!-- Repeat this for the other 3 videos in Section 1 -->
+        </div>
+    </main>
+    
+    <main>
+        <h2></h2>
+        <div class="video-tiles">
+            <!-- Video Tiles for Section 2 -->
+            <!-- You can use video elements here -->
+            <div class="video-tile">
+                <video controls>
+                    <source src="videos/G.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-tile">
+                <video controls>
+                    <source src="videos/H.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <!-- Repeat this for the other 3 videos in Section 2 -->
+        </div>
+    </main>
+    
+    
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="secondhomepage.html">Home</a></li>
+                <li><a href="tiles.html">Videos</a></li>
+                <li><a href="maingallery.html">Main Gallery</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

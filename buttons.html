@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Content Toggle with Modal</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+ /* header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }*/
+  .main {
+    padding: 20px;
+    text-align: center;
+  }
+  .header {
+  background-color: crimson;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+  .buttons {
+    margin-bottom: 20px;
+   /* background-color: crimson;
+    color: white;
+    font-family: arial bold;
+    margin: 10px;
+    border: 2px solid white;*/
+  }
+  .content {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  #modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  .close-modal {
+    float: right;
+    cursor: pointer;
+  }
+  .one{
+    background-color: crimson;
+    color: white;
+     border: 2px solid white;
+     margin: 10px;
+     font-family: arial black;
+     height: 40px;
+     border-radius: 10px;
+  }
+</style>
+</head>
+<body>
+<!--   <header style="background-color: crimson;">
+    <h1 >THE SKY COMMUNITY SCHOOL CLUBS (1st)</h1>
+  </header> -->
+  <header class="header">
+    <div class="social-media">
+      <a href="https://web.facebook.com/skycommunityschool"><img src="images/facebook.png" width="35" height="35" style="border-radius: 30px" alt="Facebook"></a>
+      <a href="skycommunityschool@gmail.com"><img src="images/email.png" width="35" height="35" style="border-radius: 30px" alt="Twitter"></a>
+      <a href="#"><img src="images/whatsap1.png" width="35" height="35" style="border-radius: 30px" alt="Instagram"></a>
+      <a href="https://www.youtube.com/@skycommunityschool230"><img src="images/youtube.jfif" width="35" height="35" style="border-radius: 30px" alt="Instagram"></a>
+      <a href="secondhomepage.html"><img src="images/LOGO.jpg" width="35" height="35" style="border-radius: 30px" alt="Instagram"></a>
+      <a href="#" style="text-decoration: none; color: white; font-family: arial black;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DEVELOPED BY CODING CLUB</a>
+    </div>
+  </header>
+  <div class="main">
+    <div class="buttons">
+      <button class="toggle-button one" data-target="content1">CODING CLUB</button>
+      <button class="toggle-button one" data-target="content2">SCIENCE & MATHS CLUB</button>
+      <button class="toggle-button one" data-target="content3">WRITERS & DEBATORS CLUB</button>
+      <button class="toggle-button one" data-target="content4">CREATIVE ART CLUB</button>
+    </div>
+    <div class="content" id="content1">
+      <h2>CODING CLUB</h2>
+      <p>Our Coding Club at Sky Community School is where students become digital architects of the future. Through coding, we unlock the limitless possibilities of technology. Students dive into the fascinating world of programming, mastering languages like Python, JavaScript, and more. They develop problem-solving skills, computational thinking, and creativity as they design websites, apps, and games.
+
+      With hands-on projects, coding challenges, and teamwork, our Coding Club fosters a passion for innovation. Our members gain a solid foundation in computer science, setting them on a path to become the tech leaders of tomorrow. Whether you're a coding novice or a seasoned developer, there's a place for you here to explore, learn, and create.</p>
+      <a href="changPageContent.html"><button class="open-modal-button" style="background-color: crimson; color: white; font-family: arial bold; height: 50px; border: 2px solid white; border-radius: 10px;">VIEW OTHER CLUBS</button></a>
+    </div>
+    <div class="content" id="content2">
+      <h2>SCIENCE & MATHS CLUB</h2>
+      <p>Welcome to the Science and Mathematics Club at Sky Community School, where curiosity knows no bounds. Our club is a haven for budding scientists and mathematicians eager to explore the mysteries of the universe. Through engaging experiments, intricate mathematical puzzles, and lively discussions, students deepen their understanding of the world around them.
+
+      In the Science and Mathematics Club, we encourage critical thinking, problem-solving, and a love for discovery. From conducting chemistry experiments to solving complex equations, our members embark on thrilling intellectual journeys. Our club provides a supportive community where students can nurture their scientific and mathematical interests, making learning an adventure.</p>
+      <a href="changPageContent.html"><button class="open-modal-button" style="background-color: crimson; color: white; font-family: arial bold; height: 50px; border: 2px solid white; border-radius: 10px;">VIEW OTHER CLUBS</button></a>
+    </div>
+    <div class="content" id="content3">
+      <h2>WRITERS & DEBATORS CLUB</h2>
+      <p>The Writer and Debaters Club at Sky Community School is where the power of words takes center stage. We believe that communication is an art, and our club is a canvas for students to express themselves eloquently and persuasively. Here, aspiring writers craft compelling narratives, poets weave emotion into verses, and debaters engage in thought-provoking discussions.
+
+Through creative writing, debate competitions, and public speaking exercises, our members refine their communication skills and gain confidence in expressing their ideas. The Writer and Debaters Club is a platform where words become catalysts for change, allowing students to explore their creativity, engage in meaningful dialogues, and develop into articulate leaders.</p>
+      <a href="changPageContent.html"><button class="open-modal-button" style="background-color: crimson; color: white; font-family: arial bold; height: 50px; border: 2px solid white; border-radius: 10px;">VIEW OTHER CLUBS</button></a>
+    </div>
+    <div class="content" id="content4">
+      <h2>CREATIVE ART CLUB</h2>
+      <p>Unleash your inner artist in the Creative Art Club at Sky Community School. Here, imagination has no limits, and creativity knows no boundaries. Our club is a vibrant space where students explore a rich tapestry of artistic expressions, from painting and sculpture to mixed media and digital art.
+
+      Through hands-on projects, art exhibitions, and collaborative sessions, our members cultivate their unique artistic voices. The Creative Art Club is not just about creating art; it's about discovering the world through a creative lens. It's a place where students transform their ideas into captivating visual stories, where colors, shapes, and textures come alive, and where art becomes a powerful means of self-expression.</p>
+      <a href="changPageContent.html"><button class="open-modal-button" style="background-color: crimson; color: white; font-family: arial bold; height: 50px; border: 2px solid white; border-radius: 10px;">VIEW OTHER CLUBS</button></a>
+    </div>
+  </div>
+  <div id="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>OUR BEST PRACTICES</h2>
+      <p>This is the modal content.</p>
+    </div>
+  </div>
+  <div id="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>HELLO WORLD</h2>
+      <p>This is the modal content.</p>
+    </div>
+  </div>
+  <script>
+    const toggleButtons = document.querySelectorAll('.toggle-button');
+    const contents = document.querySelectorAll('.content');
+    const modal = document.getElementById('modal');
+    const modalContent = document.querySelector('.modal-content');
+    const closeModal = document.querySelector('.close-modal');
+    const openModalButtons = document.querySelectorAll('.open-modal-button');
+
+    toggleButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const target = button.getAttribute('data-target');
+        contents.forEach(content => content.style.display = 'none');
+        document.getElementById(target).style.display = 'block';
+      });
+    });
+
+    openModalButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        modal.style.display = 'block';
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', event => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

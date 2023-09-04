@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homepage</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  header {
+    background-color: crimson;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+  .logo {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  nav {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  .main {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+  }
+  .carousel {
+    display: flex;
+    transition: transform 0.5s;
+  }
+  .carousel-item {
+    flex: 0 0 100%;
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: #fff;
+  }
+  .text-left {
+    text-align: left;
+  }
+  footer {
+    background-color: crimson;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <!-- <div class="logo">Logo</div> -->
+    <nav>
+      <a href="department.html">DEPARTMENT</a>
+      <a href="videotiles.html">VIDEOS</a>
+      <a href="tiles.html">PICTURES</a>
+      <a href="maingallery.html">GALLERY</a>
+      <a href="secondhomepage.html">HOME</a>
+    </nav>
+  </header>
+  <div class="main">
+    <div class="carousel">
+      <div class="carousel-item" style="background-image: url('FACEBBOK/1.jpg');">
+        <div class="text-left">
+          
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url('FACEBBOK/2.jpg');">
+        <div class="text-left">
+          <h2></h2>
+          
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url('FACEBBOK/3.jpg');">
+        <div class="text-left">
+          <h2></h2>
+          
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url('FACEBBOK/4.jpg');">
+        <div class="text-left">
+          <h2></h2>
+          
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url('FACEBBOK/5.jpg');">
+        <div class="text-left">
+          <h2></h2>
+          
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url('FACEBBOK/6.jpg');">
+        <div class="text-left">
+          <h2></h2>
+          
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url('FACEBBOK/7.jpg');">
+        <div class="text-left">
+          <h2></h2>
+          
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url('FACEBBOK/8.jpg');">
+        <div class="text-left">
+          <h2></h2>
+          
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url('FACEBBOK/9.jpg');">
+        <div class="text-left">
+          <h2></h2>
+          
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url('FACEBBOK/10.jpg');">
+        <div class="text-left">
+          <h2></h2>
+          
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url('FACEBBOK/11.jpg');">
+        <div class="text-left">
+          <h2></h2>
+          
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url('FACEBBOK/12.jpg');">
+        <div class="text-left">
+          <h2></h2>
+          
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url('FACEBBOK/13.jpg');">
+        <div class="text-left">
+          <h2></h2>
+          
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url('FACEBBOK/1.jpg');">
+        <div class="text-left">
+          <h2></h2>
+          
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url('FACEBBOK/14.jpg');">
+        <div class="text-left">
+          <h2></h2>
+          
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url('FACEBBOK/15.jpg');">
+        <div class="text-left">
+          <h2></h2>
+          
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url('FACEBBOK/1.jpg');">
+        <div class="text-left">
+          <h2></h2>
+          
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url('FACEBBOK/16.jpg');">
+        <div class="text-left">
+          <h2></h2>
+          
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url('FACEBBOK/17.jpg');">
+        <div class="text-left">
+          <h2></h2>
+          
+        </div>
+      </div>
+      
+      </div>
+      <!-- Add more carousel items -->
+    </div>
+  </div>
+  <footer>
+    <p>THE SKY COMMUNITY SCHOOL</p>
+  </footer>
+  <script>
+    const carousel = document.querySelector('.carousel');
+    let currentItem = 0;
+    setInterval(() => {
+      currentItem = (currentItem + 1) % carousel.children.length;
+      carousel.style.transform = `translateX(-${currentItem * 100}%)`;
+    }, 5000);
+  </script>
+</body>
+</html>
